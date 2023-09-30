@@ -1,0 +1,50 @@
+{
+    
+    "5-521": {
+        "ETH-ETH": {
+            "makerAddress": "0x3A2A8FAd2035B3DccEC6D52911FA404bDeB99010",
+            "sender": "0xbce8775274C3349198A09aC6D44c5A07C549699b",
+            "maxPrice": 300000000000000,
+            "minPrice": 0.01,
+            "tradingFee": 0,
+            "gasFee": 1,
+            "startTime": 0,
+            "endTime": 99999999999999
+        },
+
+        "USDEBT-USDEBT": {
+            "makerAddress": "0x4035E2745bD768A1eD91B480Ed487ACBa78C4Fe6",
+            "sender": "0x81f4ae09a642B4d1F91Ca7aDA66390233934cb1D", 
+            "maxPrice": 300000000000000,
+            "minPrice": 0.1,
+            "tradingFee": 0,
+            "gasFee": 1,
+            "startTime": 0,
+            "endTime": 99999999999999
+        }
+    },
+    "521-5": {
+
+        "ETH-ETH": {
+            "makerAddress": "0xbce8775274C3349198A09aC6D44c5A07C549699b",
+            "sender": "0x3A2A8FAd2035B3DccEC6D52911FA404bDeB99010",
+            "maxPrice": 300000000000000,
+            "minPrice": 0.01,
+            "tradingFee": 0,
+            "gasFee": 1,
+            "startTime": 0,
+            "endTime": 99999999999999
+        },
+        "USDEBT-USDEBT": {
+            "makerAddress": "0x81f4ae09a642B4d1F91Ca7aDA66390233934cb1D",
+            "sender": "0x4035E2745bD768A1eD91B480Ed487ACBa78C4Fe6",
+            "maxPrice": 300000000000000,
+            "minPrice": 0.1,
+            "tradingFee": 0,
+            "gasFee": 1,
+            "startTime": 0,
+            "endTime": 99999999999999
+        }
+    }
+    
+}

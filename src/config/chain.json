@@ -1,0 +1,71 @@
+[
+    {
+        "api": { "url": "https://api.etherscan.io/api", "key": "" },
+        "chainId": "1",
+        "networkId": "1",
+        "internalId": "1",
+        "name": "Ethereum",
+        "nativeCurrency": {
+            "name": "Ether",
+            "symbol": "ETH",
+            "decimals": 18,
+            "address": "0x0000000000000000000000000000000000000000"
+        },
+        "rpc": [
+            "https://rpc.ankr.com/eth",
+            "https://ethereum.blockpi.network/v1/rpc/public",
+            "https://eth.rpc.blxrbdn.com"
+            
+        ],
+        "watch": ["rpc", "api"],
+
+        "tokens": [
+            {
+                "name": "USDEBT",
+                "symbol": "USDEBT",
+                "decimals": 18,
+                "address": "0x00c5CA160A968f47e7272A0CFCda36428F386CB6"
+            }
+        ],
+        "infoURL": "https://etherscan.io"
+    },
+    {
+        "api": {
+            "url": "https://api.basescan.org/api",
+            "key": ""
+        },
+        "chainId": "8453",
+        "networkId": "8453",
+        "internalId": "21",
+        "name": "Base",
+        "debug": false,
+        
+        "features": [],
+        "nativeCurrency": {
+            "name": "ETH",
+            "symbol": "ETH",
+            "decimals": 18,
+            "address": "0x0000000000000000000000000000000000000000"
+        },
+        "rpc": [
+            "https://developer-access-mainnet.base.org",
+            "https://base.blockpi.network/v1/rpc/public"
+            
+        ],
+        "watch": [
+            "rpc",
+            "api"
+        ],
+        "tokens": [
+            {
+                "name": "USDEBT",
+                "symbol": "USDEBT",
+                "decimals": 18,
+                "address": "0xA23dD9379F2E12D9ce76eC738b9f5e520d1D861c"
+            }
+        ],
+        
+        "infoURL": "https://basescan.org"
+    }
+  
+]

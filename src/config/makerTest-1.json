@@ -1,0 +1,31 @@
+{
+    
+    "5-521": {
+
+
+        "USDEBT-USDEBT": {
+            "makerAddress": "0x4035E2745bD768A1eD91B480Ed487ACBa78C4Fe6",
+            "sender": "0x81f4ae09a642B4d1F91Ca7aDA66390233934cb1D", 
+            "maxPrice": 300000000000000,
+            "minPrice": 0.1,
+            "tradingFee": 0,
+            "gasFee": 1,
+            "startTime": 0,
+            "endTime": 99999999999999
+        }
+    },
+    "521-5": {
+
+        "USDEBT-USDEBT": {
+            "makerAddress": "0x81f4ae09a642B4d1F91Ca7aDA66390233934cb1D",
+            "sender": "0x4035E2745bD768A1eD91B480Ed487ACBa78C4Fe6",
+            "maxPrice": 300000000000000,
+            "minPrice": 0.1,
+            "tradingFee": 0,
+            "gasFee": 1,
+            "startTime": 0,
+            "endTime": 99999999999999
+        }
+    }
+    
+}
