@@ -38,7 +38,7 @@ export default {
                 {
                     icon: 'github',
                     title: 'Github ',
-                    value: 'https://github.com/USDEBT51923/UncleSamsBridge',
+                    value: 'https://github.com/USDEBT51923',
                 },
                 {
                     icon: 'twitter',
