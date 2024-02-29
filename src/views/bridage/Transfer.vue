@@ -138,7 +138,7 @@
       @click="sendTransfer"
       :disabled="sendBtnInfo ? sendBtnInfo.disabled : true"
       class="btn select-wallet-dialog"
-      :style="`border-radius: 40px;${!isNewVersion || isCrossAddress ? '' : 'margin-top: 10px'}`"
+      :style="`border-radius: 0px;${!isNewVersion || isCrossAddress ? '' : 'margin-top: 10px'}`"
     >
       <span class="w700 s16" style="letter-spacing: 0.15rem">
         {{ sendBtnInfo && sendBtnInfo.text }}
@@ -605,7 +605,7 @@ export default {
     timeSpenToolTip() {
       return `it takes about ${
               this.timeSpent ? this.timeSpent.replace('~', '') : this.timeSpent
-      } using UncleSamBridge.`;
+      } to use Uncle Sam's Bridge.`;
     },
     timeSpent() {
       // const { selectMakerConfig } = transferDataState;
@@ -1066,7 +1066,6 @@ export default {
           info.disabled = 'disabled';
           util.log('transferValue > 0 && toValue <= 0', transferValue.toString(), this.toValue.toString());
         } else if (this.toValue > 0 && this.toValue.comparedTo(new BigNumber(this.makerMaxBalance)) > 0) {
-
           info.text = 'INSUFFICIENT LIQUIDITY';
           info.disabled = 'disabled';
           util.log('toValue > 0 && toValue > makerMaxBalance', this.toValue.toString(), new BigNumber(this.makerMaxBalance).toString());
@@ -1471,12 +1470,13 @@ export default {
       }
     },
     async getMakerMaxBalance() {
+      
       const { selectMakerConfig } = transferDataState;
       if (!selectMakerConfig) return;
       const { toChain } = selectMakerConfig;
 
-      if (toChain.id === 21) {
-        this.makerMaxBalance = (new BigNumber(3200000000000000)).toString();
+      if (toChain.id === 21 || toChain.id === 521) {
+        this.makerMaxBalance = (new BigNumber(320000000000000000)).toString();
         return;
       }
       const _balance = await this.getBalance(
@@ -1589,7 +1589,7 @@ export default {
   .to-area {
     margin-top: 20px;
     height: 96px;
-    border-radius: 20px;
+    border-radius: 0px;
     position: relative;
     padding: 20px;
     font-weight: 400;
@@ -1730,11 +1730,11 @@ export default {
     position: relative;
     background-color: #ffffff;
     color: #161616;
-    border-radius: 40px;
+    border-radius: 0px;
     width: 100%;
     padding: 10px;
     font-family: 'Inter Regular';
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 
     .icon {
       position: absolute;
@@ -1767,7 +1767,7 @@ export default {
         text-align: center;
         font-weight: 700;
         font-size: 16px;
-        border-radius: 30px;
+        border-radius: 0px;
         cursor: pointer;
         color: #FFFFFF;
 
@@ -1788,11 +1788,11 @@ export default {
       position: relative;
       background-color: #3f415b;
       color: #FFFFFF;
-      border-radius: 40px;
+      border-radius: 0px;
       width: 100%;
       padding: 10px;
       font-family: 'Inter Regular';
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+      // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 
       .icon {
         position: absolute;
@@ -1828,7 +1828,7 @@ export default {
           font-size: 16px;
           line-height: 30px;
           height: 30px;
-          border-radius: 30px;
+          border-radius: 0px;
           cursor: pointer;
           background: linear-gradient(to right, #D93E28, #A6453E);
           color: #FFFFFF;

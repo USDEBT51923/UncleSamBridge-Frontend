@@ -392,7 +392,7 @@ export default {
                     compatibleGlobalWalletConf.value.walletPayload.provider
                 )
                 
-                if(fromChainID === 1) {
+                if(fromChainID === 1 || fromChainID === 5 ) {
                     const crossAddress = new CrossAddress(provider, fromChainID, provider.getSigner(),util.GetZeroERC20TokenAddress(fromChainID))
                     await crossAddress.contractApprove(
                         util.GetZeroERC20TokenAddress(fromChainID),
@@ -429,11 +429,22 @@ export default {
             // Immutablex's identifier is not a hash
             let title = transactionHash
 
+            getProceeding.UserTransferReady(
+                from,
+                selectMakerConfig.recipient,
+                amount,
+                fromChainID,
+                transactionHash,
+                !!selectMakerConfig.ebcId
+            )
+            
             this.$notify.success({
                 title,
                 duration: 3000,
             })
+
             this.$emit('stateChanged', '3')
+
         },
         closerButton() {
             this.$emit('stateChanged', '1')
@@ -483,7 +494,7 @@ export default {
 }
 .confirm-box {
     font-family: 'Inter Regular';
-    border-radius: 20px;
+    border-radius: 0px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;

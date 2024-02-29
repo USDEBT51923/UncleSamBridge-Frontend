@@ -253,16 +253,13 @@ export default {
             }
         },
         ToTx() {
+            let userAddress = web3State.coinbase
             if (this.detailData) {
                 const { state, toTxHash, toChainID } = this.detailData
                 if (state !== 0) {
                     return 'View on Explore'
                 } else {
-                    // immutablex
-                    if (toChainID === 8 || toChainID === 88) {
-                        return `TransferId: ${toTxHash}`
-                    }
-                    return `Tx:${util.shortAddress(toTxHash)}`
+                    return `Tx:${util.shortAddress(userAddress)}`
                 }
             }
             const { toChainID } = transferDataState
@@ -270,21 +267,15 @@ export default {
             if (proceedState < 4) {
                 return 'View on Explore'
             } else {
-                // immutablex
-                if (toChainID === 8 || toChainID === 88) {
-                    return `TransferId: ${proceeding.makerTransfer.txid}`
-                }
-                return `Tx:${util.shortAddress(proceeding.makerTransfer.txid)}`
+              
+                return `Tx:${util.shortAddress(userAddress)}`
             }
         },
         proceedData() {
+      
             const { selectMakerConfig, fromCurrency } = transferDataState
             if (this.detailData) {
                 return [
-                    // {
-                    //     title: 'Timestamp',
-                    //     desc: this.detailData.fromTimeStamp,
-                    // },
                     {
                         title: 'Value',
                         desc:
@@ -299,16 +290,7 @@ export default {
                     title: 'Timestamp',
                     desc: '45s',
                 },
-                // {
-                //     title: 'Value',
-                //     desc:
-                //         (
-                //             this.$store.state.proceeding.userTransfer.amount /
-                //             10 ** selectMakerConfig.fromChain.decimals
-                //         ).toFixed(6) +
-                //         ' ' +
-                //         fromCurrency,
-                // },
+           
             ]
         },
     },
@@ -376,15 +358,7 @@ export default {
 
             const commHandler = () => {
                 let userAddress = web3State.coinbase
-                if (toChainID == 4 || toChainID == 44) {
-                    userAddress = web3State.starkNet.starkNetAddress
-                }
                 url = accountExploreUrl[toChainID] + userAddress
-
-                // ImmutableX
-                if (toChainID == 8 || toChainID == 88) {
-                    url = accountExploreUrl[toChainID]
-                }
             }
 
             if (this.detailData) {
@@ -394,36 +368,6 @@ export default {
                     const txid = this.detailData.toTxHash
                     url = txExploreUrl[toChainID] + txid
 
-                    // ImmutableX don't have testnet browser
-                    if (toChainID == 88) {
-                        url = accountExploreUrl[toChainID]
-                    }
-
-                    // loopring
-                    if (
-                        this.detailData.toChainID == 9 ||
-                        this.detailData.toChainID == 99
-                    ) {
-                        if (
-                            this.detailData.blockNum != 0 &&
-                            this.detailData.indexInBlock != 0 &&
-                            this.detailData.blockNum != undefined &&
-                            this.detailData.indexInBlock != undefined
-                        ) {
-                            url =
-                                this.$env.txExploreUrl[
-                                    this.detailData.toChainID
-                                ] +
-                                `${this.detailData.blockNum}-${this.detailData.indexInBlock}`
-                        } else {
-                            url =
-                                this.$env.txExploreUrl[
-                                    this.detailData.toChainID
-                                ] +
-                                txid +
-                                '-transfer'
-                        }
-                    }
                 }
             } else {
                 if (this.$store.state.proceedState < 4) {
@@ -539,7 +483,7 @@ export default {
 }
 .proceed-box {
     font-family: 'Inter Regular';
-    border-radius: 20px;
+    border-radius: 0px;
     max-height: calc(
         100vh - 8.4rem - var(--top-nav-height) - var(--bottom-nav-height)
     );
@@ -561,7 +505,7 @@ export default {
         }
         .chainDataContent {
             height: 280px;
-            border-radius: 20px;
+            border-radius: 0px;
             position: relative;
             display: flex;
             flex-direction: row;
@@ -621,7 +565,7 @@ export default {
                 .switch-btn {
                     width: 128px;
                     height: 28px;
-                    border-radius: 20px;
+                    border-radius: 0px;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 28px;

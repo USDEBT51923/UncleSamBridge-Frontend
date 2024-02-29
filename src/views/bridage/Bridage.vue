@@ -153,7 +153,7 @@ export default {
         .tab-toggle-btn {
             width: 229px;
             height: 40px;
-            border-radius: 40px;
+            border-radius: 0px;
             .tab-btn-item {
                 display: inline-block;
                 width: 50%;
@@ -162,22 +162,22 @@ export default {
                 font-size: 16px;
                 height: 100%;
                 line-height: 40px;
-                border-radius: 20px;
+                border-radius: 0px;
                 cursor: pointer;
             }
             .tab-btn-item.selected {
                 background: #df2e2d;
                 color: #ffffff;
-                box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
+                // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
             }
         }
     }
     .sender-box {
-        border-radius: 20px;
+        border-radius: 0px;
     }
     .maker-box {
         position: relative;
-        border-radius: 20px;
+        border-radius: 0px;
         padding: 34px 20px;
         text-align: left;
 
@@ -219,7 +219,7 @@ export default {
                         #B2303C 4.07%,
                         #bc3035 98.55%
                     );
-                    border-radius: 40px;
+                    border-radius: 0px;
                 }
             }
 
@@ -229,7 +229,7 @@ export default {
                 font-family: 'Inter Regular';
 
                 .point {
-                    border-radius: 8px;
+                    border-radius: 0px;
                     background-color: #7bc2ba;
                     color: #e9ece2;
                     width: 16px;
@@ -265,8 +265,8 @@ export default {
             }
             .maker-foot-btn {
                 height: 50px;
-                box-shadow: inset 0px -8px 0px rgba(0, 0, 0, 0.16);
-                border-radius: 40px;
+                // box-shadow: inset 0px -8px 0px rgba(0, 0, 0, 0.16);
+                border-radius: 0px;
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 20px;

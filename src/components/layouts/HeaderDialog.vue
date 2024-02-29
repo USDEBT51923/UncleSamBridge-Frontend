@@ -332,7 +332,7 @@ export default {
         z-index: 10000;
         padding-bottom: 10px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
-        border-radius: 20px;
+        border-radius: 0px;
         .toolbox-header {
             height: 24px;
             margin-top: 18px;

@@ -45,7 +45,7 @@
                 <div
                     @click="() => (drawerVisible = true)"
                     class="center menu-outline"
-                    style="width: 44px; height: 44px; border-radius: 8px"
+                    style="width: 44px; height: 44px; border-radius: 0px"
                 >
                     <SvgIconThemed
                         icon="menu"
@@ -207,7 +207,7 @@ export default {
         .wallet-address {
             padding: 8px 24px;
             // background: #FFFFFF;
-            border-radius: 20px;
+            border-radius: 0px;
             // color: rgba(51, 51, 51, 0.8);
         }
         .connect-wallet-btn {
@@ -219,8 +219,8 @@ export default {
                 #B2303C 4.07%,
                 #bc3035 98.55%
             );
-            box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
-            border-radius: 40px;
+            // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
+            border-radius: 0px;
             color: #ffffff;
             font-style: normal;
             font-weight: 700;

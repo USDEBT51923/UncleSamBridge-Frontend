@@ -103,8 +103,8 @@ export default {
     width: 0.1rem;
     height: 25%;
     background-color: var(--loadingColor);
-    border-radius: 0.2rem;
-    -webkit-border-radius: 0.2rem;
+    border-radius: 0rem;
+    -webkit-border-radius: 0rem;
 }
 .loading .fade-item2 {
     transform: rotate(45deg);

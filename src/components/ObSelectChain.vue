@@ -194,7 +194,7 @@ export default {
     //   100vh - 8.4rem - var(--top-nav-height) - var(--bottom-nav-height)
     // );
     height: calc(100% - 8.4rem - var(--top-nav-height) - var(--bottom-nav-height));
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 20px 0;
 
     .selectChainContent {
@@ -218,7 +218,7 @@ export default {
 
         .input {
             position: relative;
-            border-radius: 2rem;
+            border-radius: 0rem;
             margin-bottom: 10px;
             height: 4rem;
             width: 100%;
@@ -268,7 +268,7 @@ export default {
         .logo {
             width: 2.4rem;
             height: 2.4rem;
-            border-radius: 50%;
+            border-radius: 0%;
             background: rgba($color: #000000, $alpha: 0.05);
             padding: 0.2rem;
         }

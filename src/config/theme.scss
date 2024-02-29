@@ -91,7 +91,7 @@
     }
   }
   background-size: 100% 360px;
-  background-color: #28293D;
+  background-color: #000; //luca modified color 28293D to #000
   &.app {
     @include obScrollbarDark;
   }
