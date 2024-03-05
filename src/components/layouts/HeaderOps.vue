@@ -9,7 +9,7 @@
             @click="connectAWallet"
             class="ops-item not-mode"
             style="margin-right: 10px"
-            >Connect a Wallet</CommBtn
+            >Connect</CommBtn
         >
         <template v-if="isLogin">
             <div

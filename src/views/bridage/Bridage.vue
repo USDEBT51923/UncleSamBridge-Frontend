@@ -166,7 +166,7 @@ export default {
                 cursor: pointer;
             }
             .tab-btn-item.selected {
-                background: #df2e2d;
+                background: #920000;
                 color: #ffffff;
                 // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
             }
@@ -216,7 +216,7 @@ export default {
                     margin-bottom: 20px;
                     background: linear-gradient(
                         90.46deg,
-                        #B2303C 4.07%,
+                        #920000 4.07%,
                         #bc3035 98.55%
                     );
                     border-radius: 0px;

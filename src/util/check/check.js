@@ -28,11 +28,7 @@ export default {
     }
   },
   checkIsImToken: function () {
-    if (compatibleGlobalWalletConf.value.walletPayload.provider) {
-      if (compatibleGlobalWalletConf.value.walletPayload.provider.isImToken) {
-        return true
-      }
-    }
+
     return false
   },
   checkIsMetaMask: function () {

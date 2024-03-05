@@ -13,11 +13,7 @@ import { isBraveWallet } from '../utils'
 // chainIdTransfer maybe can be optimize
 const defaultChainIdTransfer = (chainId) => parseInt(chainId, 16)
 const standardMobileAppConf = [
-  {
-    walletType: IM_TOKEN_APP,
-    walletIsInstalledInvestigator: (provider) => provider.isImToken,
-    chainIdTransfer: defaultChainIdTransfer,
-  },
+
   {
     walletType: LOOPRING_APP,
     walletIsInstalledInvestigator: (provider) => provider.isLoopring,

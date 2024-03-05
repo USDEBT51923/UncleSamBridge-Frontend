@@ -15,7 +15,7 @@
                     :icon="!isBRAAVOS && navIcons.logo"
                     :iconName="navIcons.logo"
                 /> -->
- 
+
             </div>
             <HeaderOps />
         </template>
@@ -28,45 +28,23 @@
             /> -->
             <!-- <ToggleBtn v-if="showToggleBtn()" @input="toggleTab" /> -->
             <div class="center">
-                <div
-                    v-if="!isLogin"
-                    @click="connectWallet"
-                    class="wallet-status connect-wallet-btn"
-                >
-                    Connect Wallet
+                <div v-if="!isLogin" @click="connectWallet" class="wallet-status connect-wallet-btn">
+                    Connect
                 </div>
-                <div
-                    v-else
-                    @click="connectAWallet"
-                    class="wallet-status wallet-address"
-                >
+                <div v-else @click="connectAWallet" class="wallet-status wallet-address">
                     {{ showAddress }}
                 </div>
-                <div
-                    @click="() => (drawerVisible = true)"
-                    class="center menu-outline"
-                    style="width: 44px; height: 44px; border-radius: 0px"
-                >
-                    <SvgIconThemed
-                        icon="menu"
-                        style="width: 26px; height: 22px"
-                    />
+                <div @click="() => (drawerVisible = true)" class="center menu-outline"
+                    style="width: 44px; height: 44px; border-radius: 0px">
+                    <SvgIconThemed icon="menu" style="width: 26px; height: 22px" />
                 </div>
             </div>
-            <el-drawer
-                :size="280"
-                title=""
-                :visible.sync="drawerVisible"
-                direction="rtl"
-                :before-close="() => (drawerVisible = false)"
-            >
+            <el-drawer :size="280" title="" :visible.sync="drawerVisible" direction="rtl"
+                :before-close="() => (drawerVisible = false)">
                 <div class="drawer-body">
                     <div class="drawer-bottom">
                         <div class="drawer-bottom-wrapper">
-                            <HeaderOps
-                                verical
-                                @closeDrawer="() => (drawerVisible = false)"
-                            />
+                            <HeaderOps verical @closeDrawer="() => (drawerVisible = false)" />
                         </div>
                     </div>
                 </div>
@@ -88,6 +66,9 @@ import {
 import HeaderOps from './HeaderOps.vue'
 import { walletIsLogin } from '../../composition/walletsResponsiveData'
 import Middle from '../../util/middle/middle'
+import { isBrowserApp } from '../../util'
+import { walletConnectDispatcherOnInit } from '../../util/walletsDispatchers/pcBrowser/walletConnectPCBrowserDispatcher'
+import { WALLETCONNECT } from '../../util/walletsDispatchers'
 
 export default {
     name: 'TopNav',
@@ -169,11 +150,22 @@ export default {
             return this.$route.path === '/' || this.$route.path === '/history'
         },
         connectWallet() {
+            console.log("==========================")
+            if (isBrowserApp()) {
+                console.log("**********************")
+                walletConnectDispatcherOnInit(WALLETCONNECT)
+                return
+            }
             Middle.$emit('connectWallet', true)
         },
         connectAWallet() {
-            setStarkNetDialog(false)
+            if (isBrowserApp()) {
+                walletConnectDispatcherOnInit(WALLETCONNECT)
+                return
+            }
+            
             setSelectWalletDialogVisible(true)
+            setActDialogVisible(true)
         },
     },
 }
@@ -185,10 +177,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .logo {
         cursor: pointer;
     }
 }
+
 .app {
     .top-nav {
         .logo {
@@ -197,28 +191,30 @@ export default {
         }
     }
 }
+
 .app-mobile {
     .top-nav {
         padding: 16px 20px;
+
         .wallet-status {
             cursor: pointer;
             margin-right: 15px;
         }
+
         .wallet-address {
             padding: 8px 24px;
             // background: #FFFFFF;
             border-radius: 0px;
             // color: rgba(51, 51, 51, 0.8);
         }
+
         .connect-wallet-btn {
             width: 148px;
             height: 40px;
             line-height: 40px;
-            background: linear-gradient(
-                90.46deg,
-                #B2303C 4.07%,
-                #bc3035 98.55%
-            );
+            background: linear-gradient(90.46deg,
+                    #920000 4.07%,
+                    #bc3035 98.55%);
             // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
             border-radius: 0px;
             color: #ffffff;
@@ -234,6 +230,7 @@ export default {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+
             .drawer-bottom {
                 width: 100%;
                 padding: 0 46px 40px 46px;
@@ -245,6 +242,7 @@ export default {
         }
     }
 }
+
 ::v-deep .el-drawer__header {
     display: none;
 }

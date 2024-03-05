@@ -66,26 +66,26 @@
                             <svg-icon
                                 v-if="$store.state.proceedState === 1"
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="history_2"
                             ></svg-icon>
                             <svg-icon
                                 v-else-if="$store.state.proceedState === 2"
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="history_3"
                             ></svg-icon>
                             <svg-icon
                                 v-else
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="status-success"
                             ></svg-icon>
                         </template>
                         <svg-icon
                             v-else
                             class="status-icon"
-                            color="#df2e2d"
+                            color="#920000"
                             iconName="status-success"
                         ></svg-icon>
                         <span>{{ FromTx }}</span>
@@ -128,19 +128,19 @@
                             <svg-icon
                                 v-if="$store.state.proceedState === 4"
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="history_3"
                             ></svg-icon>
                             <svg-icon
                                 v-else-if="$store.state.proceedState === 5"
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="status-success"
                             ></svg-icon>
                             <svg-icon
                                 v-else
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="history_1"
                             ></svg-icon>
                         </template>
@@ -148,19 +148,19 @@
                             <svg-icon
                                 v-if="detailData.state === 0"
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="status-success"
                             ></svg-icon>
                             <svg-icon
                                 v-else-if="detailData.state === 1"
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="history_2"
                             ></svg-icon>
                             <svg-icon
                                 v-else
                                 class="status-icon"
-                                color="#df2e2d"
+                                color="#920000"
                                 iconName="status-error"
                             ></svg-icon>
                         </template>

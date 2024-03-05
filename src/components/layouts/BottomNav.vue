@@ -75,13 +75,15 @@ export default {
 <style scoped lang="scss">
 .app {
     .bottom-nav {
-        margin-top: 36px;
+       
+        padding-top: 36px;
         padding-bottom: 12px;
     }
 }
 .app-mobile {
     .bottom-nav {
-        margin-top: 20px;
+        background: #000;
+        padding-top: 20px;
         padding-bottom: 24px;
     }
 }

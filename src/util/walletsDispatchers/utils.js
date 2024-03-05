@@ -64,7 +64,6 @@ export const ethereumWalletTypeFitChecker = (walletType, ethereum) => {
   if (walletType === COINBASE) return ethereum.isCoinbaseWallet
   if (walletType === BRAVE) return isBraveWallet
   if (walletType === BRAVE_APP) return isBraveWallet
-  if (walletType === IM_TOKEN_APP) return ethereum.isImToken
   if (walletType === METAMASK_APP) return ethereum.isMetaMask
   if (walletType === TOKEN_POCKET_APP) return ethereum.isTokenPocket
   if (walletType === BIT_KEEP_APP) return 'isBitKeepChrome' in ethereum

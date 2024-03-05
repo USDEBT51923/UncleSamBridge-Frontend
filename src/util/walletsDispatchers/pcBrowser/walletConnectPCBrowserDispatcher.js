@@ -132,6 +132,7 @@ const onSessionUpdateCallback = (payload) => {
 
 // wake up the wallet connect modal by invoke this method
 export const walletConnectDispatcherOnInit = async (walletType) => {
+  console.log("=============================")
   const projectId = process.env.VUE_APP_WALLET_CONNECT_PROJECTID
   if (!projectId) throw new Error('Project id missing.')
   const chains = Object.values(chainsModule)

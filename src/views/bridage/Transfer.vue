@@ -1622,7 +1622,7 @@ export default {
 
       .right {
         width: 100%;
-        // color: #df2e2d;
+        // color: #920000;
         text-align: right;
         border: 0;
         outline: 0px;
@@ -1677,7 +1677,7 @@ export default {
     display: inline-block;
     line-height: 34px;
     margin-bottom: 20px;
-    background: linear-gradient(90.46deg, #B2303C 4.07%, #bc3035 98.55%);
+    background: linear-gradient(90.46deg, #920000 4.07%, #bc3035 98.55%);
   }
   .info-box {
     font-family: 'Inter Regular';
@@ -1701,7 +1701,7 @@ export default {
     }
   }
   .red {
-    color: #df2e2d;
+    color: #920000;
   }
   .warn {
     color: #E2989A;
@@ -1774,7 +1774,7 @@ export default {
         height: 40px;
         display: inline-block;
         line-height: 40px;
-        background: linear-gradient(90.46deg, #B2303C 4.07%, #bc3035 98.55%);
+        background: linear-gradient(90.46deg, #920000 4.07%, #bc3035 98.55%);
       }
     }
   }

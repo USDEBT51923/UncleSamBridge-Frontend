@@ -55,7 +55,7 @@ export default {
         cursor: pointer;
     }
     .tab-btn-item.selected {
-        background: #df2e2d;
+        background: #920000;
         color: #ffffff;
         // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
     }

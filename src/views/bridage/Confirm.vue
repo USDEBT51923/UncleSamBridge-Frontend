@@ -50,7 +50,7 @@
                             style="
                                 margin-left: 0.7rem;
                                 margin-right: 0.7rem;
-                                color: #df2e2d;
+                                color: #920000;
                                 width: 90px;
                                 display: -moz-inline-box;
                                 display: inline-block;
@@ -65,7 +65,7 @@
                         style="
                             margin-left: 0.7rem;
                             margin-right: 0.7rem;
-                            color: #df2e2d;
+                            color: #920000;
                             width: 90px;
                             display: -moz-inline-box;
                             display: inline-block;
@@ -82,7 +82,7 @@
                         <span
                             style="
                                 margin-left: 0.7rem;
-                                color: #df2e2d;
+                                color: #920000;
                                 width: 90px;
                                 display: -moz-inline-box;
                                 display: inline-block;
@@ -114,7 +114,7 @@
             "
         >
             <SvgIconThemed style="margin-right: 10px" icon="info" />
-            <span style="color: #df2e2d; flex: 1"
+            <span style="color: #920000; flex: 1"
                 >Please do not modify the transaction or remove the last four
                 digits on the transfer amount in your wallet as this will cause
                 the transaction to fail.</span
@@ -533,7 +533,7 @@ export default {
         margin-top: 20px;
         height: 50px;
         line-height: 34px;
-        background: linear-gradient(90.46deg, #B2303C 4.07%, #bc3035 98.55%);
+        background: linear-gradient(90.46deg, #920000 4.07%, #bc3035 98.55%);
     }
 }
 .o-tip {

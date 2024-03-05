@@ -72,11 +72,12 @@
 .dark-theme {
   &.app-mobile {
     .top-nav {
+      background: #000;
       .menu-outline {
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
       .drawer-body {
-        background: var(--dark-page-bg);
+        background: #000;
       }
       .wallet-address {
         background: var(--dark-page-box-bg);

@@ -12,7 +12,7 @@
         >
             <div class="toolbox-header">
                 <span class="toolbox-title">{{
-                    isLogin ? 'Connect information' : 'Connect a Wallet'
+                    isLogin ? 'Connect information' : 'Connect'
                 }}</span>
                 <SvgIconThemed
                     @click.native="closeSelectWalletDialog"
