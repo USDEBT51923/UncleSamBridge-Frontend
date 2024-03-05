@@ -42,7 +42,7 @@ export default {
     .gif-wrap {
         width: 160px;
         height: 160px;
-        border-radius: 0px;
+        border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;

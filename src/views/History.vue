@@ -619,20 +619,20 @@ export default {
 }
 .dark-theme .history-page >>> .el-pager li:hover {
     color: rgba(255, 255, 255, 0.6);
-    background: #3f415b;
+    background: #0C0B0E;
     border-radius: 8px;
 }
 .dark-theme .history-page >>> .el-pagination button:disabled {
-    background-color: #373951;
+    background-color: #121015;
     color: rgba(255, 255, 255, 0.6);
 }
 .dark-theme .history-page >>> .el-pager li {
-    background-color: #373951;
+    background-color: #121015;
     color: rgba(255, 255, 255, 0.6);
 }
 .dark-theme .history-page >>> .el-pagination .btn-next,
 .dark-theme .history-page >>> .el-pagination .btn-prev {
-    background: center center no-repeat #373951;
+    background: center center no-repeat #121015;
     color: rgba(255, 255, 255, 0.6);
 }
 .app-mobile .history-page >>> .el-pager li {

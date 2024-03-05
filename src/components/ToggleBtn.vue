@@ -42,7 +42,7 @@ export default {
 .toggle-btn-box {
     width: 229px;
     height: 40px;
-    border-radius: 0px;
+    border-radius: 5px;
     .tab-btn-item {
         display: inline-block;
         width: 50%;
@@ -51,7 +51,7 @@ export default {
         font-size: 16px;
         height: 100%;
         line-height: 40px;
-        border-radius: 0px;
+        border-radius: 5px;
         cursor: pointer;
     }
     .tab-btn-item.selected {

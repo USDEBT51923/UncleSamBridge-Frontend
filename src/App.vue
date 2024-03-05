@@ -184,7 +184,7 @@ export default {
   .app-content {
     .main {
       height: calc(100% - 83px - 96px);
-      border-radius: 0px;
+      border-radius: 5px;
       display: flex;
     }
   }

@@ -35,7 +35,7 @@
                     {{ showAddress }}
                 </div>
                 <div @click="() => (drawerVisible = true)" class="center menu-outline"
-                    style="width: 44px; height: 44px; border-radius: 0px">
+                    style="width: 44px; height: 44px; border-radius: 10px">
                     <SvgIconThemed icon="menu" style="width: 26px; height: 22px" />
                 </div>
             </div>
@@ -204,7 +204,7 @@ export default {
         .wallet-address {
             padding: 8px 24px;
             // background: #FFFFFF;
-            border-radius: 0px;
+            border-radius: 5px;
             // color: rgba(51, 51, 51, 0.8);
         }
 
@@ -216,7 +216,7 @@ export default {
                     #920000 4.07%,
                     #bc3035 98.55%);
             // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
-            border-radius: 0px;
+            border-radius: 5px;
             color: #ffffff;
             font-style: normal;
             font-weight: 700;

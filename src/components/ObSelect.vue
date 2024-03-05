@@ -142,7 +142,7 @@ export default {
 
 <style scoped lang="scss">
 .ob-select-box {
-    border-radius: 0px;
+    border-radius: 5px;
     width: 120px;
     height: 40px;
     display: flex;
@@ -166,7 +166,7 @@ export default {
         position: absolute;
         left: 0;
         top: 40px;
-        border-radius: 0px;
+        border-radius: 5px;
         min-width: 200px;
         padding: 10px 0;
         z-index: 100;

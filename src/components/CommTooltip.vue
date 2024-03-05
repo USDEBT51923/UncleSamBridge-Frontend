@@ -53,7 +53,7 @@ export default {
         font-size: 14px;
         line-height: 20px;
         padding: 15px;
-        border-radius: 0px;
+        border-radius: 5px;
     }
 }
 .light-comm_tooltip {

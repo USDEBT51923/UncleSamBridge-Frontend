@@ -483,7 +483,7 @@ export default {
 }
 .proceed-box {
     font-family: 'Inter Regular';
-    border-radius: 0px;
+    border-radius: 5px;
     max-height: calc(
         100vh - 8.4rem - var(--top-nav-height) - var(--bottom-nav-height)
     );
@@ -505,7 +505,7 @@ export default {
         }
         .chainDataContent {
             height: 280px;
-            border-radius: 0px;
+            border-radius: 5px;
             position: relative;
             display: flex;
             flex-direction: row;
@@ -565,7 +565,7 @@ export default {
                 .switch-btn {
                     width: 128px;
                     height: 28px;
-                    border-radius: 0px;
+                    border-radius: 5px;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 28px;

@@ -1,7 +1,7 @@
 // ---------- theme variable ----------
 :root {
-  --dark-page-bg: #373951;
-  --dark-page-box-bg: #3F415B;
+  --dark-page-bg: #121015;
+  --dark-page-box-bg: #0C0B0E;
   --dark-page-color: #FFF;
   --dark-page-box-primary-color: #FFF;
   --dark-page-box-color: rgba(255, 255, 255, 0.6);
@@ -15,20 +15,20 @@
     width: 8px;
   }
   .ob-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     background: rgba(51, 51, 51, 0.2);
   }
   // .ob-scrollbar::-webkit-scrollbar-track {
   //   -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-  //   border-radius: 10px;
+  //   border-radius: 5px;
   //   background: #EDEDED;
   // }
   &.ob-scrollbar::-webkit-scrollbar {
     width: 8px;
   }
   &.ob-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     background: rgba(51, 51, 51, 0.2);
   }
@@ -38,13 +38,13 @@
     width: 8px;
   }
   .ob-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     background: rgba(255, 255, 255, 0.4);
   }
   // .ob-scrollbar::-webkit-scrollbar-track {
   //   -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-  //   border-radius: 10px;
+  //   border-radius: 5px;
   //   background: #535353;
   // }
 
@@ -52,7 +52,7 @@
     width: 8px;
   }
   &.ob-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     background: rgba(255, 255, 255, 0.4);
   }
@@ -72,12 +72,12 @@
 .dark-theme {
   &.app-mobile {
     .top-nav {
-      background: #000;
+      background: #0C0B0E;
       .menu-outline {
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
       .drawer-body {
-        background: #000;
+        background: #0C0B0E;
       }
       .wallet-address {
         background: var(--dark-page-box-bg);
@@ -92,7 +92,7 @@
     }
   }
   background-size: 100% 360px;
-  background-color: #000; //luca modified color 28293D to #000
+  background-color: #0C0B0E; //luca modified color 28293D to #000
   &.app {
     @include obScrollbarDark;
   }
@@ -116,7 +116,7 @@
         color: var(--dark-page-box-primary-color);
       }
       .contentItem:hover {
-        background: #3F415B;
+        background: #0C0B0E;
       }
     }
   }
@@ -127,15 +127,15 @@
     .raiseup-select-box-wrapper {
       color: #FFFFFF;
       .items {
-        background: #373951;
+        background: #121015;
         .item {
           &.selected {
-            background: #3F415B;
+            background: #0C0B0E;
           }
         }
       }
       .cancel {
-        background: #373951;
+        background: #121015;
       }
     }
   }

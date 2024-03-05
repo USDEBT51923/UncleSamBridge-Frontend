@@ -28,7 +28,7 @@
                 v-if="item.descInfo && item.descInfo.length > 0"
                 class="descBottom"
             >
-                <div
+             <div
                     v-for="(desc, index) in item.descInfo"
                     :key="desc.no"
                     style="margin-bottom: 1rem"
@@ -72,7 +72,7 @@
                             text-align: center;
                         "
                     >
-                        {{ desc.from }}
+                    {{ formatValue(desc.from) }}
                     </span>
                     To
                     <o-tooltip placement="topLeft">
@@ -92,9 +92,9 @@
                             {{ desc.to }}
                         </span>
                     </o-tooltip>
-                    <span style="margin-left: 0.3rem; vertical-align: -25%">
+                    <!-- <span style="margin-left: 0.3rem; vertical-align: -25%">
                         <SvgIconThemed :icon="desc.icon" />
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div
@@ -104,21 +104,6 @@
                     height: 43px;
                 "
             ></div>
-        </div>
-        <div
-            style="
-                padding: 0 30px;
-                display: flex;
-                text-align: left;
-                padding-top: 8px;
-            "
-        >
-            <SvgIconThemed style="margin-right: 10px" icon="info" />
-            <span style="color: #920000; flex: 1"
-                >Please do not modify the transaction or remove the last four
-                digits on the transfer amount in your wallet as this will cause
-                the transaction to fail.</span
-            >
         </div>
 
         <CommBtn @click="RealTransfer" class="select-wallet-dialog">
@@ -182,7 +167,22 @@ const {
     walletDispatchersOnSwitchChain,
     walletConnectSendTransaction,
 } = walletDispatchers
-
+const numberShorter = (x) => {
+    if (x === 0) {
+      return "0.0"
+    }
+    if (x / 1000000000000 >= 1) {
+      return `${(x / 1000000000000).toFixed(1)}T`;
+    } else if (x / 1000000000 >= 1) {
+      return `${(x / 1000000000).toFixed(1)}B`;
+    } else if (x / 1000000 >= 1) {
+      return `${(x / 1000000).toFixed(1)}M`;
+    } else if (x / 1000 >= 1) {
+      return `${(x / 1000).toFixed(1)}K`;
+    } else {
+      return `${x?.toFixed(1)}`;
+    }
+  };
 export default {
     name: 'Confirm',
     components: { SvgIconThemed, CommBoxHeader, CommBtn, HelpIcon },
@@ -239,7 +239,7 @@ export default {
                     desc: this.expectValue,
                     textBold: true,
                 },
-                {
+{
                     icon: 'exchange',
                     title: 'Bridge Routes',
                     // notice: 'After the ‘Sender’ submits the transaction, the assets are transferred to the ‘Maker’s’ address who will provide the liquidity. UncleSamBridge’s contract will ensure the safety of the assets and will make sure that the ‘Sender’ receives the assets to the target network.',
@@ -449,6 +449,17 @@ export default {
         closerButton() {
             this.$emit('stateChanged', '1')
         },
+        formatValue(value) {
+            const numericPart = parseFloat(value);
+            const suffix = value.replace(/[\d.-]/g, '');
+            if (!isNaN(numericPart)) {
+            const formattedNumber = numberShorter(numericPart);
+            return `${formattedNumber}`;
+            }
+            // return value; // Return the original value if it can't be parsed
+            return numericPart
+        },
+
     },
     async mounted() {
         const { selectMakerConfig, transferValue } = transferDataState
@@ -494,7 +505,7 @@ export default {
 }
 .confirm-box {
     font-family: 'Inter Regular';
-    border-radius: 0px;
+    border-radius: 5px;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;

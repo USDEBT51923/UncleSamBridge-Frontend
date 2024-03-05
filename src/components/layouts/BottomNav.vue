@@ -82,7 +82,7 @@ export default {
 }
 .app-mobile {
     .bottom-nav {
-        background: #000;
+        background: #0C0B0E;
         padding-top: 20px;
         padding-bottom: 24px;
     }

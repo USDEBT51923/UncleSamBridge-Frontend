@@ -153,7 +153,7 @@ export default {
         .tab-toggle-btn {
             width: 229px;
             height: 40px;
-            border-radius: 0px;
+            border-radius: 5px;
             .tab-btn-item {
                 display: inline-block;
                 width: 50%;
@@ -162,7 +162,7 @@ export default {
                 font-size: 16px;
                 height: 100%;
                 line-height: 40px;
-                border-radius: 0px;
+                border-radius: 5px;
                 cursor: pointer;
             }
             .tab-btn-item.selected {
@@ -173,11 +173,11 @@ export default {
         }
     }
     .sender-box {
-        border-radius: 0px;
+        border-radius: 5px;
     }
     .maker-box {
         position: relative;
-        border-radius: 0px;
+        border-radius: 5px;
         padding: 34px 20px;
         text-align: left;
 
@@ -219,7 +219,7 @@ export default {
                         #920000 4.07%,
                         #bc3035 98.55%
                     );
-                    border-radius: 0px;
+                    border-radius: 5px;
                 }
             }
 
@@ -229,7 +229,7 @@ export default {
                 font-family: 'Inter Regular';
 
                 .point {
-                    border-radius: 0px;
+                    border-radius: 5px;
                     background-color: #7bc2ba;
                     color: #e9ece2;
                     width: 16px;
@@ -266,7 +266,7 @@ export default {
             .maker-foot-btn {
                 height: 50px;
                 // box-shadow: inset 0px -8px 0px rgba(0, 0, 0, 0.16);
-                border-radius: 0px;
+                border-radius: 5px;
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 20px;

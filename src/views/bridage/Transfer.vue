@@ -138,7 +138,7 @@
       @click="sendTransfer"
       :disabled="sendBtnInfo ? sendBtnInfo.disabled : true"
       class="btn select-wallet-dialog"
-      :style="`border-radius: 0px;${!isNewVersion || isCrossAddress ? '' : 'margin-top: 10px'}`"
+      :style="`border-radius: 5px;${!isNewVersion || isCrossAddress ? '' : 'margin-top: 10px'}`"
     >
       <span class="w700 s16" style="letter-spacing: 0.15rem">
         {{ sendBtnInfo && sendBtnInfo.text }}
@@ -1589,7 +1589,7 @@ export default {
   .to-area {
     margin-top: 20px;
     height: 96px;
-    border-radius: 0px;
+    border-radius: 5px;
     position: relative;
     padding: 20px;
     font-weight: 400;
@@ -1730,7 +1730,7 @@ export default {
     position: relative;
     background-color: #ffffff;
     color: #161616;
-    border-radius: 0px;
+    border-radius: 5px;
     width: 100%;
     padding: 10px;
     font-family: 'Inter Regular';
@@ -1767,7 +1767,7 @@ export default {
         text-align: center;
         font-weight: 700;
         font-size: 16px;
-        border-radius: 0px;
+        border-radius: 5px;
         cursor: pointer;
         color: #FFFFFF;
 
@@ -1786,9 +1786,9 @@ export default {
 
     .dialog-box {
       position: relative;
-      background-color: #3f415b;
+      background-color: #0C0B0E;
       color: #FFFFFF;
-      border-radius: 0px;
+      border-radius: 5px;
       width: 100%;
       padding: 10px;
       font-family: 'Inter Regular';
@@ -1828,7 +1828,7 @@ export default {
           font-size: 16px;
           line-height: 30px;
           height: 30px;
-          border-radius: 0px;
+          border-radius: 5px;
           cursor: pointer;
           background: linear-gradient(to right, #D93E28, #A6453E);
           color: #FFFFFF;

@@ -18,7 +18,7 @@ export default {
     height: 40px;
     background: #920000;
     // box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.16);
-    border-radius: 0px;
+    border-radius: 5px;
     padding: 8px 24px;
     text-align: center;
     color: white;

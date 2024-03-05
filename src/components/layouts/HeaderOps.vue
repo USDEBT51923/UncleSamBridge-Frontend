@@ -122,7 +122,7 @@ export default {
     .ops-mode {
         width: 40px;
         height: 40px;
-        border-radius: 0%;
+        border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -134,7 +134,7 @@ export default {
     }
     .ops-item {
         padding: 8px 18px;
-        border-radius: 0px;
+        border-radius: 5px;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
