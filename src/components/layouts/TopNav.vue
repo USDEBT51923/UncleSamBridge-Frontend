@@ -2,30 +2,22 @@
     <div class="top-nav">
         <template v-if="!isMobile">
             <div style="height: 100%; position: relative">
-                <!-- <img
-                    v-if="isStarknet"
-                    src="../../assets/v2/starknet-logo.png"
-                    style="width: 190px; height: 80px"
+                <img
+                 
+                    src="../../assets/v2/usdebt-logo.png"
+                    style="width: 30px; height: 30px; border-radius: 50%; margin-left: 40px; margin-top: 20px"
                 />
-                <SvgIconThemed
-                    v-else
-                    @click.native="toHome"
-                    class="logo"
-                    :style="navIcons.style"
-                    :icon="!isBRAAVOS && navIcons.logo"
-                    :iconName="navIcons.logo"
-                /> -->
-
             </div>
             <HeaderOps />
         </template>
         <template v-else>
-            <!-- <SvgIconThemed
-                @click.native="toHome"
-                class="logo"
-                :style="navIcons.style"
-                :icon="navIcons.logo"
-            /> -->
+            <div style="height: 100%; position: relative">
+                <img
+                 
+                    src="../../assets/v2/usdebt-logo.png"
+                    style="width: 30px; height: 30px; border-radius: 50%;"
+                />
+            </div>
             <!-- <ToggleBtn v-if="showToggleBtn()" @input="toggleTab" /> -->
             <div class="center">
                 <div v-if="!isLogin" @click="connectWallet" class="wallet-status connect-wallet-btn">

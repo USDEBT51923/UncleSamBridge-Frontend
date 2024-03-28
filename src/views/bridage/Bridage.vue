@@ -1,5 +1,11 @@
 <template>
     <div class="bridage-page">
+        <div class="transfer-box">
+            <div class="top-area" >
+                <h1  class="title">Uncle Sam Bridge</h1> 
+                <span  class="title">USDEBT is a multi-chain meme coin.  <br/>This smart contract allows the transfer of USDEBT between Ethereum and Base Chain. <br/><br/></span>
+            </div>
+        </div>
         <template>
             <div
                 v-show="!isMobile && status === '1' && !showDetail"
@@ -107,6 +113,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .app {
     .bridage-page {
         .maker-box {

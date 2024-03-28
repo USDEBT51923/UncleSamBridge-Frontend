@@ -71,6 +71,38 @@
 
 .dark-theme {
   &.app-mobile {
+    .transfer-box {
+      color: var(--dark-page-box-color);
+      background-color: #0C0B0E;
+      .top-area {
+        .title {
+          color: #FFF;
+        }
+      }
+      .from-area, .to-area {
+        // background: var(--dark-page-box-bg);
+        color: var(--dark-page-box-color);
+        .bottomItem {
+          input::placeholder {
+            color: rgba(255, 255, 255, 0.2) !important;
+          }
+          .maxBtn {
+            color: #1DFFF1;
+          }
+          .right {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+      .info-box {
+        .info-item {
+          .border {
+            border-right:1px solid #888;
+          }
+        }
+      }
+    }
+
     .top-nav {
       background: #0C0B0E;
       .menu-outline {
@@ -193,7 +225,7 @@
       }
     }
     .from-area, .to-area {
-      background: var(--dark-page-box-bg);
+      // background: var(--dark-page-box-bg);
       color: var(--dark-page-box-color);
       .bottomItem {
         input::placeholder {
